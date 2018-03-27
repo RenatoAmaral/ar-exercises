@@ -1,3 +1,4 @@
+
 require_relative '../setup'
 
 puts "Exercise 1"
