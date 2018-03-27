@@ -9,13 +9,6 @@ puts "Exercise 6"
 puts "----------"
 
 # Your code goes here ...
-class Store < ActiveRecord::Base
-  has_many :employees
-end
-
-class Employee < ActiveRecord::Base
-  belongs_to :store
-end
 
 @store1.employees.create(first_name: "Khurram", last_name: "Virani", hourly_rate: 60)
 @store1.employees.create(first_name: "Bob", last_name: "Smith", hourly_rate: 60)
@@ -36,3 +29,7 @@ end
 @store2.employees.create(first_name: "Carol", last_name: "Bond", hourly_rate: 60)
 @store2.employees.create(first_name: "Ashley", last_name: "Smith", hourly_rate: 80)
 @store2.employees.create(first_name: "Will", last_name: "Notagain", hourly_rate: 60)
+
+puts Employee.count
+puts "\n***** Total Number of Employees #{Employee.count} *****\n"
+puts "*******************************************************\n\n"
